@@ -33,6 +33,25 @@ def select_all():
     return transactions
 
 
+def select(id):
+    transaction = None
+    sql = "SELECT * FROM transactions WHERE id = %s"
+    values = [id]
+    results = run_sql(sql, values)
+
+    if results:
+        result = results[0]
+        user = user_repository.select(result['user_id'])
+        transaction = Transaction(
+            result['merchant'],
+            result['category'],
+            result['amount'], 
+            user, 
+            result['id']
+            )
+    return transaction
+
+
 def delete_all():
     sql = "DELETE  FROM transactions"
     run_sql(sql)
