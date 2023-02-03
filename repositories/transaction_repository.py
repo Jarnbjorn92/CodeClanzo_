@@ -24,6 +24,21 @@ def select_all():
     for row in results:
         user = user_repository.select(row['user_id'])
         transaction = Transaction(
-            row['merchant'], row['duration'], row['completed'], row['id'])
+            row['merchant'], 
+            row['category'], 
+            row['amount'],
+            user,
+            row['id'])
         transactions.append(transaction)
     return transactions
+
+
+def delete_all():
+    sql = "DELETE  FROM transactions"
+    run_sql(sql)
+
+
+def delete(id):
+    sql = "DELETE  FROM transactions WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
