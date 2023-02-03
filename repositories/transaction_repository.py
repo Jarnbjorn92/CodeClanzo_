@@ -7,4 +7,23 @@ import repositories.user_repository as user_repository
 
 
 def save(transaction):
-    sql = "INSERT"
+    sql = "INSERT INTO transactions (merchant, category, amount, user_id) VALUES (%s, %s, %s, %s) RETURNING *"
+    values = [transaction.merchant, transaction.category, transaction.amount, transaction.user.id]
+    results = run_sql(sql, values)
+    id = results[0]['id']
+    transaction.id = id
+    return transaction
+
+
+def select_all():
+    transactions = []
+
+    sql = "SELECT * FROM transactions"
+    results = run_sql(sql)
+
+    for row in results:
+        user = user_repository.select(row['user_id'])
+        transaction = Transaction(
+            row['merchant'], row['duration'], row['completed'], row['id'])
+        transactions.append(transaction)
+    return transactions

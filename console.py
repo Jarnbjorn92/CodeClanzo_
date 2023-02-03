@@ -4,11 +4,13 @@ from models.transaction import Transaction
 import repositories.transaction_repository as transaction_repository
 import repositories.user_repository as user_repository
 
-# user_1 = User('Connor', 'Fleming')
-# user_repository.save(user_1)
+user_1 = User('Connor', 'Fleming')
+user_repository.save(user_1)
 # TESTED AND WORKS. 
 
 # user_repository.delete(1)
 # TESTED AND WORKS.
 
 
+transaction_1 = Transaction("ASDA", "Groceries", 10.50, user_1)
+transaction_repository.save(transaction_1)
