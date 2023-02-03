@@ -10,7 +10,7 @@ CREATE TABLE users (
 CREATE TABLE transactions (
     id SERIAL PRIMARY KEY,
     merchant VARCHAR(255),
-    catagory VARCHAR(255),
+    category VARCHAR(255),
     amount FLOAT,
     user_id INT NOT NULL REFERENCES users(id)
 );
