@@ -8,7 +8,12 @@ import repositories.user_repository as user_repository
 
 def save(transaction):
     sql = "INSERT INTO transactions (merchant, category, amount, user_id) VALUES (%s, %s, %s, %s) RETURNING *"
-    values = [transaction.merchant, transaction.category, transaction.amount, transaction.user.id]
+    values = [
+        transaction.merchant,
+        transaction.category,
+        transaction.amount,
+        transaction.user.id
+        ]
     results = run_sql(sql, values)
     id = results[0]['id']
     transaction.id = id
@@ -60,4 +65,16 @@ def delete_all():
 def delete(id):
     sql = "DELETE  FROM transactions WHERE id = %s"
     values = [id]
+    run_sql(sql, values)
+
+
+def update(transaction):
+    sql = "UPDATE transactions SET (merchant, category, amount, user_id) = (%s, %s, %s, %s) WHERE id = %s"
+    values = [
+        transaction.merchant, 
+        transaction.category, 
+        transaction.amount, 
+        transaction.user.id, 
+        transaction.id
+        ]
     run_sql(sql, values)

@@ -20,4 +20,4 @@ import repositories.user_repository as user_repository
 # transaction_repository.delete(2)
 # TESTED AND WORKING
 
-transaction_repository.select(1)
+# transaction_repository.select(1)
