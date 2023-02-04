@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <title>CodeClanzo_</title>
@@ -8,17 +8,23 @@
     </head>
     <body>
         <header>
+            <div>
+                <h1>CodeClanzo_</h1>
+            </div>
+        </header>
+        <main>
             <nav>
                 <ul class ="menu">
                     <li><a href="/">Home</a></li>
                     <li><a href="/users">Users</a></li>
-                    <li><a href="/transactions/new">New Transaction</a></li>
+                    <li><a href="/transactions/new">New <br>Transaction</a></li>
                 </ul>
             </nav>
-        </header>
-        <div class="container">
-            {% block content %}
-            {% endblock %}
-        </div>
-    </body>
+        </main>
+        <main>
+            <div class="container">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </main>
 </html>
