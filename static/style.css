@@ -1,3 +1,9 @@
+body {
+    background-image: url('images/codeclanzo\ background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 body > header {
     background-color: dodgerblue;
     color: white;

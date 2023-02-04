@@ -13,6 +13,12 @@
             </div>
         </header>
         <main>
+            <div class="container">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </main>
+        <footer>
             <nav>
                 <ul class ="menu">
                     <li><a href="/">Home</a></li>
@@ -20,11 +26,5 @@
                     <li><a href="/transactions/new">New <br>Transaction</a></li>
                 </ul>
             </nav>
-        </main>
-        <main>
-            <div class="container">
-                {% block content %}
-                {% endblock %}
-            </div>
-        </main>
+        </footer>
 </html>
