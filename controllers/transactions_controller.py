@@ -4,6 +4,12 @@ from models.transaction import Transaction
 
 
 # NEW
+# GET '/users/new'
+
+# CREATE
+# POST '/users'
+
+# NEW
 # GET '/transactions/new'
 
 # CREATE
