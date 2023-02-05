@@ -6,12 +6,10 @@ import repositories.transaction_repository as transaction_repository
 
 transactions_blueprint = Blueprint("transactions", __name__)
 
-
-# NEW
-# GET '/users/new'
-
-# CREATE
-# POST '/users'
+@transactions_blueprint.route('/transactions/index.html')
+def transactions():
+    transactions = transaction_repository.select_all()
+    return render_template("transactions/index.html", all_transactions = transactions)
 
 # NEW
 # GET '/transactions/new'
@@ -29,4 +27,7 @@ transactions_blueprint = Blueprint("transactions", __name__)
 # PUT '/transactions/<id>'
 
 # DELETE
-# DELETE '/transactions/<id>'
+# DELETE '/transactions/<id>/delete'
+@transactions_blueprint.route("/transactions/<id>/delete", methods = ['POST'])
+def delete_book(id):
+    

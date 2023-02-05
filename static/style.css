@@ -8,3 +8,13 @@ body > header {
     background-color: dodgerblue;
     color: white;
 }
+
+body > footer {
+    background-color: dodgerblue;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content:center;
+}
