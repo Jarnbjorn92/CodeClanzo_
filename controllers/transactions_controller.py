@@ -6,7 +6,7 @@ import repositories.transaction_repository as transaction_repository
 
 transactions_blueprint = Blueprint("transactions", __name__)
 
-@transactions_blueprint.route('/transactions/index.html')
+@transactions_blueprint.route('/transactions')
 def transactions():
     transactions = transaction_repository.select_all()
     return render_template("transactions/index.html", all_transactions = transactions)
@@ -30,4 +30,5 @@ def transactions():
 # DELETE '/transactions/<id>/delete'
 @transactions_blueprint.route("/transactions/<id>/delete", methods = ['POST'])
 def delete_book(id):
-    
+    transaction_repository.delete(id)
+    return redirect('/transactions')
