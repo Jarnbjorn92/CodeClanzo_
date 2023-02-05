@@ -1,28 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% for transaction in all_transactions %}
+<h2>Select User:</h2>
+{% for user in all_users %}
     <div class="user">
         <div class="content">
-            <a href="/transactions/{{transaction.id}}">{{transaction.merchant}}</a>
-            <div class="category">
-                {{transaction.category}}
-                <div>
-                    {{transaction.amount}}
-                    <div>
-                        User: {{transaction.user.full_name()}}
-                    </div>
-                </div>
-            </div>
+            <a href="user/{{user.id}}"><br>{{user.first_name}} {{user.last_name}}</a>
         </div>
     </div>
 
-    <div class="'buttons">
-        <form class="delete-form" action="transactions/{{transaction.id}}/delete" method="POST">
-            <button class="delete-button" value="delete">Delete</button>
-        </form>
-
-    </div>
-
-{% endfor%}
+{% endfor %}
 {% endblock %}

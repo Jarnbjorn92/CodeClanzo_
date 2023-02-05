@@ -14,6 +14,7 @@ def transactions():
 # NEW
 # GET '/transactions/new'
 
+
 # CREATE
 # POST '/transactions'
 
@@ -32,3 +33,4 @@ def transactions():
 def delete_book(id):
     transaction_repository.delete(id)
     return redirect('/transactions')
+    

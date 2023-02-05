@@ -4,11 +4,11 @@
 {% for transaction in all_transactions %}
     <div class="transaction">
         <div class="content">
-            <a href="/transactions/{{transaction.id}}">{{transaction.merchant}}</a>
+            <h3>Merchant: {{transaction.merchant}}</h3>
             <div class="category">
-                {{transaction.category}}
+                Category: {{transaction.category}}
                 <div>
-                    {{transaction.amount}}
+                    Amount: £{{transaction.amount}}
                     <div>
                         User: {{transaction.user.full_name()}}
                     </div>
@@ -16,7 +16,7 @@
             </div>
         </div>
     </div>
-
+    <br>
     <div class="'buttons">
         <form class="delete-form" action="transactions/{{transaction.id}}/delete" method="POST">
             <button class="delete-button" value="delete">Delete</button>

@@ -21,3 +21,4 @@ import repositories.user_repository as user_repository
 # TESTED AND WORKING
 
 # transaction_repository.select(1)
+user_repository.select_all()
