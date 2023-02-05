@@ -31,12 +31,16 @@ def create_transaction():
     transaction_repository.save(transaction)
     return redirect('/transactions')
 
-
 # SHOW
 # GET '/transactions/<id>'
 
 # EDIT
 # GET '/transactions/<id>/edit'
+@transactions_blueprint.route('/transactions/<id>/edit', methods = ['GET'])
+def edit_transaction(id):
+    transaction = transaction_repository.select(id)
+    users = user_repository.select_all()
+    return render_template('transactions/edit.html', transaction = transaction, all_users = users)
 
 # UPDATE
 # PUT '/transactions/<id>'
