@@ -4,7 +4,7 @@
     <h2><u>{{ user.full_name() }}</u></h2>
 </div>
 <div>
-    <h3>Total Spend:</h3>
+    <h3>Total Spend: {{ user_total }}</h3>
 </div>
 {% for transaction in user_transactions %}
 <div class="transaction">

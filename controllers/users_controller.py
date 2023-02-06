@@ -24,11 +24,14 @@ def create_user():
 # SHOW
 # GET '/users/<id>'
 # ALSO HAS TO SHOW TRANSACTIONS
+# GIVES TOTAL USER AMOUNT
 @users_blueprint.route('/users/<id>')
 def show_user(id):
     user = user_repository.select(id)
     transactions = user_repository.transactions(user)
-    return render_template('/users/show.html', user = user, user_transactions = transactions)
+    total = user.get_total(transactions)
+
+    return render_template('/users/show.html', user = user, user_transactions = transactions, user_total = total)
 
 # DELETE
 # POST '/users/<id>/delete
