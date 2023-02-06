@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<form action="/transactions">
+<form action="/transactions", method="POST">
     <div>
         <label for="merchant">Merchant:</label>
         <input type="text" id="merchant" name="merchant" placeholder="merchant" required autofocus>
@@ -29,10 +29,8 @@
                 <option value="{{ user.id }}">{{ user.full_name() }}</option>
             {% endfor %}
         </select>
+        <button type="submit">Confirm</button>
     </div>
-    
-    <button type="submit">Confirm</button>
-
 </form>
 
 {% endblock %}

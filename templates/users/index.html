@@ -11,7 +11,7 @@
 
 <h2>Select User:</h2>
 {% for user in all_users %}
-<form action="/users/{{user.id}}/delete">
+<form action="/users/{{user.id}}/delete", method="POST">
     <div class="user">
         <div class="content">
             <a href="user/{{user.id}}">{{ user.full_name() }}</a>
