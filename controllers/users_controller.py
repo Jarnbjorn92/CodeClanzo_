@@ -27,9 +27,8 @@ def create_user():
 @users_blueprint.route('/users/<id>')
 def show_user(id):
     user = user_repository.select(id)
-
-    return render_template('/users/show.html', user = user)
-
+    transactions = user_repository.transactions(user)
+    return render_template('/users/show.html', user = user, user_transactions = transactions)
 
 # DELETE
 # POST '/users/<id>/delete

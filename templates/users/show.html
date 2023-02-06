@@ -1,6 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
+<div>
+    <h2><u>{{ user.full_name() }}</u></h2>
+</div>
+<div>
+    <h3>Total Spend:</h3>
+</div>
+{% for transaction in user_transactions %}
+<div class="transaction">
+    <div class="content">
+        <h3>Merchant: {{transaction.merchant}}</h3>
+        <div class="category">
+            Category: {{transaction.category}}
+            <div>
+                Amount: £{{transaction.amount}}
+            </div>
+        </div>
+    </div>
+</div>
+<br>
 
-Place holder until i figure this shit out
-
+{% endfor %}
 {% endblock %}
