@@ -2,15 +2,16 @@
 {% block content %}
 
 <h2>Create User:</h2>
-<form>
-    <label for="first-name">New User:</label>
-    <input type="text" id="first-name" name="first-name" placeholder="First name" autofocus>
-    <input type="text" id="last-name" name="'last=name" placeholder="Last name">
+<form action="/users" method="POST">
+    <label for="New_User">New User:</label>
+    <input type="text" id="first_name" name="first_name" placeholder="First name" autofocus>
+    <input type="text" id="last_name" name="last_name" placeholder="Last name">
+    <button class="create-user" value="create-user">Create</button>
 </form>
 
 <h2>Select User:</h2>
 {% for user in all_users %}
-<form>
+<form action="/users/{{user.id}}/delete">
     <div class="user">
         <div class="content">
             <a href="user/{{user.id}}">{{ user.full_name() }}</a>
