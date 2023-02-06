@@ -51,7 +51,7 @@ def update_transaction(id):
     category = request.form['category']
     amount = request.form['amount']
     user = user_repository.select(request.form['user_id'])
-    transaction = Transaction(merchant, category, amount, user)
+    transaction = Transaction(merchant, category, amount, user, id)
     print(transaction.user.full_name)
     transaction_repository.update(transaction)
     return redirect('/transactions')
