@@ -45,6 +45,16 @@ def edit_transaction(id):
 
 # UPDATE
 # PUT '/transactions/<id>'
+@transactions_blueprint.route('/transactions/<id>', methods=['POST'])
+def update_transaction(id):
+    merchant = request.form['merchant']
+    category = request.form['category']
+    amount = request.form['amount']
+    user = user_repository.select(request.form['user_id'])
+    transaction = Transaction(merchant, category, amount, user)
+    print(transaction.user.full_name)
+    transaction_repository.update(transaction)
+    return redirect('/transactions')
 
 # DELETE
 # DELETE '/transactions/<id>/delete'

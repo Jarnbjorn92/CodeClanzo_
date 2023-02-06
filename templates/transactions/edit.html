@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/transactions/{{transaction.id}}", method="POST">
+    <div>
+        <label for="merchant">Merchant:</label>
+        <input type="text" id="merchant" name="merchant" value="{{transaction.merchant}}" placeholder="merchant" required autofocus>
+    </div>
+    <div>
+        <label for="category">Category:</label>
+        <select id="category" name="category">
+            <option value="groceries">Groceries</option>
+            <option value="bills">Bills</option>
+            <option value="eating-out">Eating Out</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="shopping">Shopping</option>
+            <option value="holidays">Holidays</option>
+            <option value="expenses">Expenses</option>
+        </select>
+    </div>
+    <div>
+        <label for="amount">Amount: £</label>
+        <input type="number" id="amount" name="amount" placeholder="amount" required>
+    </div>
+    <div>
+        <label for="user">User:</label>
+        <select id="user" name="user_id">
+            {% for user in all_users %}
+            <option value="{{ user.id }}"
+                {% if transaction.user.id == user.id %} selected="selected"{% endif %}>
+                {{ user.full_name() }}
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+    
+    <button type="submit">Confirm</button>
+
+</form>
+
+{% endblock %}
