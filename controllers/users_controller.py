@@ -21,6 +21,16 @@ def create_user():
     user_repository.save(user)
     return redirect('/users')
 
+# SHOW
+# GET '/users/<id>'
+# ALSO HAS TO SHOW TRANSACTIONS
+@users_blueprint.route('/users/<id>')
+def show_user(id):
+    user = user_repository.select(id)
+
+    return render_template('/users/show.html', user = user)
+
+
 # DELETE
 # POST '/users/<id>/delete
 @users_blueprint.route('/users/<id>/delete', methods=['POST'])
