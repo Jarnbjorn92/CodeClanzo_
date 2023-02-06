@@ -17,7 +17,8 @@ def show_transactions():
 @transactions_blueprint.route("/transactions/new")
 def new_transaction():
     transactions = transaction_repository.select_all()
-    return render_template('transactions/new.html', transactions = transactions)
+    users = user_repository.select_all()
+    return render_template('transactions/new.html', transactions = transactions, all_users = users)
 
 # CREATE
 # POST '/transactions'

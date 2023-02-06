@@ -19,7 +19,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        user = (
+        user = User(
             row['first_name'],
             row['last_name'],
             row['id']

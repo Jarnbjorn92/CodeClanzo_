@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h2>Create User:</h2>
+
 <h2>Select User:</h2>
 {% for user in all_users %}
+
     <div class="user">
         <div class="content">
-            <a href="user/{{user.id}}"><br>{{ user.first_name }} {{ user.last_name }}</a>
+            <a href="user/{{user.id}}">{{ user.full_name() }}</a>
         </div>
     </div>
+
 
 {% endfor %}
 {% endblock %}
