@@ -3,6 +3,7 @@
 
 <div class="conatiner">
 {% for transaction in all_transactions %}
+<div class="transaction-list">
     <div class="transaction">
         <div class="content">
             <h3>Merchant: {{transaction.merchant}}</h3>
@@ -26,7 +27,7 @@
             <button class="edit-button" value="edit">Edit</button>
         </form>
     </div>
-
+</div>
 {% endfor%}
 </div>
 {% endblock %}

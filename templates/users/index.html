@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div>
 <h2>Create User:</h2>
 <form action="/users" method="POST">
     <label for="New_User">New User:</label>
@@ -8,7 +9,7 @@
     <input type="text" id="last_name" name="last_name" placeholder="Last name">
     <button class="create-user" value="create-user">Create</button>
 </form>
-
+</div>
 <p>
 <div class="container">
 <h2>Select User:</h2>
