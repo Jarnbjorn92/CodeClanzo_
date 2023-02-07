@@ -9,7 +9,7 @@ header {
     background-color: dodgerblue;
     color: white;
     font-family: "Questrial";
-    letter-spacing: 0.1em;
+    letter-spacing: 1em;
     text-align: right;
 }
 
@@ -21,9 +21,10 @@ header {
 
 .container > div {
     background-color: aliceblue;
-    border: solid;
+    border: 3px solid;
     border-color: orange;
     padding: 5px 10px;
+    border-radius: 0.5em;
 }
 
 .navbar {
@@ -50,7 +51,8 @@ li {
 }
 
 .navbar > nav > ul > li > a:hover {
-    color: orange
+    color: orange;
+    text-decoration: underline;
 }
 
 .transaction-list {
@@ -58,6 +60,8 @@ li {
     margin-bottom: 10px;
     padding: 5px 10px;
     text-align: center;
+    border-radius: 0.5em;
+    border-style: inset;
 }
 
 input {
