@@ -4,18 +4,18 @@
 <div class="full-name">
     <div>
         <h2><u>{{ user.full_name() }}</u></h2>
-        <h3>Total Spend: {{ user_total }}</h3>
+        <h3>Total Spend: £{% print"{:.2f}".format(user_total) %}</h3>
     </div>
 
 {% for transaction in user_transactions %}
 <div class="transaction-list">
     <div class="transaction">
         <div class="content">
-            <h3>Merchant: {{transaction.merchant}}</h3>
+            <h3 style="text-transform: capitalize;">Merchant: {{transaction.merchant}}</h3>
             <div class="category">
                 Category: {{transaction.category}}
                 <div>
-                    Amount: £{{transaction.amount}}
+                    Amount: £{% print"{:.2f}".format(transaction.amount) %}
                 </div>
             </div>
         </div>
