@@ -10,11 +10,7 @@ header {
     color: white;
     font-family: "Questrial";
     letter-spacing: 0.1em;
-    
-}
-
-footer {
-    background-color: dodgerblue;
+    text-align: right;
 }
 
 .container {
@@ -27,7 +23,7 @@ footer {
 .container > div {
     background-color: aliceblue;
     border: solid;
-    border-color: black;
+    border-color: orange;
     border-radius: 5%;
 
 }
@@ -42,6 +38,8 @@ footer {
     list-style: none;
     display: flex;
     position: bottom;
+    background-color: dodgerblue;
+    margin-bottom: auto;
 }
 
 li {
