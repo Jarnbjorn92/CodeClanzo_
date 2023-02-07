@@ -9,6 +9,8 @@
     <button class="create-user" value="create-user">Create</button>
 </form>
 
+<p>
+<div class="container">
 <h2>Select User:</h2>
 {% for user in all_users %}
 <form action="/users/{{user.id}}/delete", method="POST">
@@ -21,4 +23,7 @@
 </form>
 
 {% endfor %}
+</div>
+</p>
+
 {% endblock %}
