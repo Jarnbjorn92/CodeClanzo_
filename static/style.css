@@ -3,6 +3,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0%;
+    font-family: "Questrial";
+    letter-spacing: 0.1em;
 }
 
 header {
@@ -90,6 +92,7 @@ input {
     border-color: darkblue;
     color: darkblue;
     border-radius: 0.5em;
+    font-family: "Questrial";
 }
 
 .delete-button:hover {
@@ -101,6 +104,7 @@ input {
     border-color: darkblue;
     color: darkblue;
     border-radius: 0.5em;
+    font-family: "Questrial";
 }
 
 .create-button:hover {
@@ -112,6 +116,7 @@ input {
     border-color: darkblue;
     color: darkblue;
     border-radius: 0.5em;
+    font-family: "Questrial";
 }
 
 .edit-button:hover {
@@ -123,6 +128,7 @@ input {
     border-color: darkblue;
     color: darkblue;
     border-radius: 0.5em;
+    font-family: "Questrial";
 }
 
 .submit:hover {
