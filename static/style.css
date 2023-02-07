@@ -78,3 +78,7 @@ input {
     color: orange;
     text-decoration: underline;
 }
+
+.create-transaction {
+    text-align: center;
+}
