@@ -10,7 +10,8 @@
             <div class="category">
                 Category: {{transaction.category}}
                 <div>
-                    Amount: £{{transaction.amount}}
+                    <!-- Amount: £{{transaction.amount}} -->
+                    Amount: £{% print"{:.2f}".format(transaction.amount) %}
                     <div>
                         User: {{transaction.user.full_name()}}
                     </div>
