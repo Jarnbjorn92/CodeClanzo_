@@ -1,26 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="full-name">
+    <div>
+        <h2><u>{{ user.full_name() }}</u></h2>
+        <h3>Total Spend: {{ user_total }}</h3>
+    </div>
 
-<div>
-    <h2><u>{{ user.full_name() }}</u></h2>
-</div>
-<div>
-    <h3>Total Spend: {{ user_total }}</h3>
-</div>
 {% for transaction in user_transactions %}
-<div class="transaction">
-    <div class="content">
-        <h3>Merchant: {{transaction.merchant}}</h3>
-        <div class="category">
-            Category: {{transaction.category}}
-            <div>
-                Amount: £{{transaction.amount}}
+<div class="transaction-list">
+    <div class="transaction">
+        <div class="content">
+            <h3>Merchant: {{transaction.merchant}}</h3>
+            <div class="category">
+                Category: {{transaction.category}}
+                <div>
+                    Amount: £{{transaction.amount}}
+                </div>
             </div>
         </div>
     </div>
 </div>
-<br>
 
 {% endfor %}
+</div>
+
 {% endblock %}

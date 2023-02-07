@@ -82,3 +82,37 @@ input {
 .create-transaction {
     text-align: center;
 }
+
+.delete-button {
+    background-color: dodgerblue;
+    border-color: darkblue;
+    color: darkblue;
+    border-radius: 0.5em;
+}
+
+.delete-button:hover {
+    background-color: orange;
+}
+
+.create-button {
+    background-color: dodgerblue;
+    border-color: darkblue;
+    color: darkblue;
+    border-radius: 0.5em;
+}
+
+.create-button:hover {
+    background-color: orange;
+}
+
+.edit-button {
+    background-color: none;
+    border-color: darkblue;
+    color: darkblue;
+    border-radius: 0.5em;
+}
+
+.edit-button:hover {
+    background-color: orange;
+}
+
