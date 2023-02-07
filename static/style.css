@@ -48,6 +48,8 @@ li {
 .navbar > nav > ul > li > a {
     text-decoration: none;
     color: white;
+    letter-spacing: 0.2em;
+    font-family: "Questrial";
 }
 
 .navbar > nav > ul > li > a:hover {
