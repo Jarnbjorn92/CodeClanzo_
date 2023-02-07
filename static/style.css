@@ -5,7 +5,7 @@ body {
     margin: 0;
 }
 
-body > header {
+header {
     background-color: dodgerblue;
     color: white;
     font-family: "Questrial";
@@ -13,14 +13,35 @@ body > header {
     
 }
 
-body > footer {
+footer {
     background-color: dodgerblue;
 }
 
-.menu {
+.container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    max-width: 500px;
+}
+
+.container > div {
+    background-color: aliceblue;
+    border: solid;
+    border-color: black;
+    border-radius: 5%;
+
+}
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.navbar > nav > ul {
     list-style: none;
     display: flex;
-    justify-content:right;
+    position: bottom;
 }
 
 li {

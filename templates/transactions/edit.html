@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="container">
+    <div>
 <form action="/transactions/{{transaction.id}}", method="POST">
     <div>
         <label for="merchant">Merchant:</label>
@@ -37,5 +39,7 @@
     <button type="submit">Update</button>
 
 </form>
+    </div>
+</div> 
 
 {% endblock %}
