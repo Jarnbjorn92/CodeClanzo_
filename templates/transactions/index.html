@@ -7,18 +7,17 @@
     <div class="transaction">
         <div class="content">
             <h3 style="text-transform: capitalize;">Merchant: {{transaction.merchant}}</h3>
-            <div class="category">
+            <div style="text-transform: capitalize;" class="category">
                 Category: {{transaction.category}}
                 <div>
                     Amount: £{% print"{:.2f}".format(transaction.amount) %}
                     <div>
-                        User: {{transaction.user.full_name()}}
+                        <h4 style="text-transform: capitalize;">User: {{transaction.user.full_name()}}</h4>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <br>
     <div class="'buttons">
         <form class="delete-form" action="transactions/{{transaction.id}}/delete" method="POST">
             <button class="delete-button" value="delete">Delete</button>

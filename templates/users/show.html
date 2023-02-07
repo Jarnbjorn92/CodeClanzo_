@@ -3,7 +3,7 @@
 
 <div class="full-name">
     <div>
-        <h2><u>{{ user.full_name() }}</u></h2>
+        <h2 style="text-transform: capitalize;"><u>{{ user.full_name() }}</u></h2>
         <h3>Total Spend: £{% print"{:.2f}".format(user_total) %}</h3>
     </div>
 
@@ -12,7 +12,7 @@
     <div class="transaction">
         <div class="content">
             <h3 style="text-transform: capitalize;">Merchant: {{transaction.merchant}}</h3>
-            <div class="category">
+            <div class="category" style="text-transform: capitalize;">
                 Category: {{transaction.category}}
                 <div>
                     Amount: £{% print"{:.2f}".format(transaction.amount) %}
