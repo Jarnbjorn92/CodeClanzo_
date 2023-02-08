@@ -29,7 +29,7 @@ Build an app that allows a user to track their spending.
 ## User instructions:
 
 ### User
-* To create user, go to the 'User' section. Input users first and last name in before hitting 'Create'.
+* To create user, go to the 'User' section. Input users first and last name before hitting 'Create'.
 * By clicking the user you can view the total amount spent, and transactions related to that user.
 
 ### Transactions
