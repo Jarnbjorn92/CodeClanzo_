@@ -13,6 +13,7 @@ header {
     font-family: "Questrial";
     letter-spacing: 1em;
     text-align: right;
+    text-shadow: 1px 1px 5px black;
 }
 
 .container {
@@ -52,6 +53,7 @@ li {
     color: white;
     letter-spacing: 0.2em;
     font-family: "Questrial";
+    text-shadow: 1px 1px 5px black;
 }
 
 .navbar > nav > ul > li > a:hover {
