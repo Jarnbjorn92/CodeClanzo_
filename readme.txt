@@ -1,4 +1,4 @@
-Brief:
+#Brief:
 
 Spending Tracker
 Build an app that allows a user to track their spending.
