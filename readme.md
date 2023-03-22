@@ -35,3 +35,17 @@ Build an app that allows a user to track their spending.
 ### Transactions
 * To create a new transaction, use the 'New Transaction' menu option. Add details and hit confirm. Any created users will appear in the user section.
 * To see all and edit transactions, go to the 'All Transactions' menu option. From here you can delete and/or update transactions.
+
+
+# Images
+_Homepage:_
+![homepage](/pics/Screen%20Shot%202023-03-22%20at%2021.43.33.png)
+
+_Users:_
+![users](/pics/Screen%20Shot%202023-03-22%20at%2021.43.47.png)
+
+_All Transactions:_
+![a-transacts](/pics/Screen%20Shot%202023-03-22%20at%2021.44.02.png)
+
+_New Transaction:_
+![n-transact](/pics/Screen%20Shot%202023-03-22%20at%2021.44.22.png)
